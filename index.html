@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LUXURY IS A CURSE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <style>
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      40% { opacity: 0.2; }
+      60% { opacity: 0.6; }
+      80% { opacity: 0.1; }
+    }
+
+    @keyframes glitch {
+      0% { clip-path: inset(10% 0 80% 0); transform: skew(0.5deg); }
+      10% { clip-path: inset(15% 0 70% 0); transform: skew(-0.5deg); }
+      20% { clip-path: inset(5% 0 60% 0); transform: skew(0.5deg); }
+      30% { clip-path: inset(25% 0 50% 0); transform: skew(-0.5deg); }
+      40% { clip-path: inset(10% 0 40% 0); transform: skew(0.5deg); }
+      50% { clip-path: inset(20% 0 30% 0); transform: skew(-0.5deg); }
+      60% { clip-path: inset(10% 0 20% 0); transform: skew(0.5deg); }
+      70% { clip-path: inset(25% 0 10% 0); transform: skew(-0.5deg); }
+      80% { clip-path: inset(10% 0 5% 0); transform: skew(0.5deg); }
+      90% { clip-path: inset(5% 0 5% 0); transform: skew(-0.5deg); }
+      100% { clip-path: inset(0 0 0 0); transform: skew(0deg); }
+    }
+
+    body {
+      background: black;
+      color: white;
+      font-family: 'Staatliches', cursive;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      text-align: center;
+      cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1166.cur'), auto;
+    }
+
+    video#bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      filter: brightness(0.2) contrast(1.5) saturate(2);
+    }
+
+    h1, h2, p {
+      animation: flicker 0.4s infinite, glitch 2s infinite;
+      text-shadow: 0 0 5px red, 0 0 10px crimson, 0 0 15px orange;
+      margin: 10px;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-top: 30px;
+      color: #ff0000;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #ff0055;
+    }
+
+    .album-cover {
+      width: 70%;
+      max-width: 500px;
+      border: 5px solid white;
+      margin-top: 30px;
+      box-shadow: 0 0 25px red;
+      animation: flicker 0.7s infinite alternate;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Видео фон -->
+  <video autoplay muted loop id="bg-video">
+    <source src="IMG_8160.MP4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Аудио -->
+  <audio autoplay loop>
+    <source src="LoL v final.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>GREEDY</h1>
+  <h2>LUXURY IS A CURSE</h2>
+
+  <img src="5467399394379823188.jpg" alt="Album Cover" class="album-cover" />
+
+  <p>рэперы вам пизда, готовьтесь 🖕🖕🖕</p>
+</body>
+</html>
